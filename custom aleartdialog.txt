@@ -1,0 +1,35 @@
+
+1.Take a one layout xml file. dresign as of your requirement.
+
+2. add the cutom dialog to your adapter.
+
+       // creating custom dialog
+
+                    final Dialog dialog = new Dialog(getContext());
+                    dialog.setContentView(R.layout.layout_for_aleartdialog);
+                    
+2. in your custom adapter find that all the views using the dialog object.
+then do what ever you want.
+
+ex: 
+ 		    final Dialog dialog = new Dialog(getContext());
+                    dialog.setContentView(R.layout.layout_for_aleartdialog);
+
+                    TextView  radiogrpforPayment = (TextView)dialog. findViewById(R.id.rg1);
+                    radiogrpforPayment.setText(arraylistForFuelRefilingData.get(position).getPaymentMethod());
+
+                    ImageButton b1 = (ImageButton) dialog.findViewById(R.id.b1);
+
+                    b1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+ 			dialog.show();
+                }
+
+            });
+
+=====================================================================================================================
